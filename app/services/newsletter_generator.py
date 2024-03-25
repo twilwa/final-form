@@ -4,12 +4,13 @@ from app.services.gemini_service import GeminiService
 # from app.pipelines.newsletter_pipeline import execute_newsletter_pipeline
 
 
+
+
 def generate_newsletter_from_query(query):
     # Fetch or generate your newsletter as Markdown
     newsletter_md = "# Newsletter Title\n\nSome content for **query**: " + query
     newsletter_html = markdown(newsletter_md)
-    # Ensure that the HTML is marked safe for rendering in the template
-    return Markup(newsletter_html)
+    return newsletter_html
 
 # def generate_newsletter_from_query(query):
     # gemini_service = GeminiService()
