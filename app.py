@@ -11,7 +11,7 @@ def main():
     if st.button("Generate Newsletter"):
         newsletter_content = generate_newsletter_from_query(query)
 
-        with open('final-form/app/static/topstories.csv', 'r') as file:
+        with open('app/static/topstories.csv', 'r') as file:
             reader = csv.DictReader(file)
             top_stories = list(reader)
 
