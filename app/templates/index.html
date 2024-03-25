@@ -1,0 +1,11 @@
+<!-- Inside your index.html or a dedicated template -->
+
+<form id="query-form" hx-post="/search" hx-target="#newsletter-content" hx-swap="outerHTML">
+  <input type="text" name="query" placeholder="Enter your query here..." class="input-class"/>
+  <button type="submit" class="btn-class">Search</button>
+</form>
+
+<!-- The newsletter content will be loaded here -->
+<div id="newsletter-content">
+  <!-- Content loaded via HTMX will go here -->
+</div>
