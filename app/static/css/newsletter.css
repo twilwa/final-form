@@ -1,0 +1,20 @@
+.newsletter {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.newsletter h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.newsletter a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.newsletter a:hover {
+    text-decoration: underline;
+}

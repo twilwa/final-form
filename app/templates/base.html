@@ -20,7 +20,7 @@
             <button @click="open = !open" class="px-4 py-2 bg-blue-500 text-white rounded">Toggle</button>
             <div x-show="open" class="mt-2">Alpine.js is working!</div>
         </header>
-        <!-- HTMX example will go here -->
+        {% block content %}{% endblock %}
     </div>
 </body>
 </html>

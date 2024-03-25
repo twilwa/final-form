@@ -1,22 +1,11 @@
 from flask import Flask, request, render_template
+from app.routes.home import home_bp
+from app.routes.search import search_bp
 import os
 
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-# In your /app/routes or app.py file
-
-@app.route('/search', methods=['POST'])
-def search_newsletters():
-    query = request.form.get('query')
-    # Process the query, fetch data, generate newsletter, etc.
-    # For this example, let's say you have a function that returns the rendered Markdown as HTML
-    newsletter_html = generate_newsletter_from_query(query)
-    return newsletter_html
-
+app = Flask(__name__, template_folder='/home/anon/ubuntu-repos/final-form/app/templates', static_folder='/home/anon/ubuntu-repos/final-form/app/static')
+app.register_blueprint(home_bp)
+app.register_blueprint(search_bp)
 
 if __name__ == '__main__':
     app.run(debug=True)
